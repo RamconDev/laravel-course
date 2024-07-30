@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CursoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,29 +15,18 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+// Route::get('/', 'HomeController');  // < v8 laravel
+// Route::get('/', 'CursoController@index');  // < v8 laravel
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', HomeController::class);
 
-Route::get('cursos', function () {
-    return "Cursos";
-});
+// Route::get('cursos', [CursoController::class, 'index']);
+// Route::get('cursos/create', [CursoController::class, 'create']);
+// Route::get('cursos/{curso}', [CursoController::class, 'show']);
 
-Route::get('cursos/create', function () {
-    return "Crear Curso";
-});
-
-// Route::get('cursos/{curso}', function($curso) {
-//     return "Curso: $curso";
-// });
-
-Route::get('cursos/{curso}/{categoria?}', function($curso, $categoria = null) {
-
-    if ( $categoria ) {
-        return "Curso: $curso<br/> Categoria: $categoria";
-    } else {
-        return "Curso: $curso";
-    }
-
+//GRUPO DE RUTAS // > v9 laravel
+Route::controller(CursoController::class)->group( function () {
+    Route::get('cursos', 'index');
+    Route::get('cursos/create', 'create');
+    Route::get('cursos/{curso}', 'show');
 });
