@@ -20,6 +20,11 @@ use App\Http\Controllers\CursoController;
 
 Route::get('/', HomeController::class);
 
+
+/**
+ * Controlador para Cursos
+ */
+
 // Route::get('cursos', [CursoController::class, 'index']);
 // Route::get('cursos/create', [CursoController::class, 'create']);
 // Route::get('cursos/{curso}', [CursoController::class, 'show']);
