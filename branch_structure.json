@@ -1,0 +1,33 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "07-factories",
+    "08-mutators-accessors",
+    "09-crud",
+    "10-form-validate",
+    "11-mass-assignment",
+    "12-delete-registers",
+    "dev",
+    "main"
+  ],
+  "parent": {
+    "07-factories": "main",
+    "08-mutators-accessors": "main",
+    "09-crud": "main",
+    "10-form-validate": "main",
+    "11-mass-assignment": "main",
+    "12-delete-registers": "main",
+    "dev": "main",
+    "main": null
+  },
+  "order": [
+    "main",
+    "07-factories",
+    "08-mutators-accessors",
+    "09-crud",
+    "10-form-validate",
+    "11-mass-assignment",
+    "12-delete-registers",
+    "dev"
+  ]
+}
