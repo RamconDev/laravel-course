@@ -56,4 +56,15 @@ class User extends Authenticatable
             }
         );
     }
+
+    /**
+     * Old versions commuters and accessors
+     */
+
+    // public function setNameAttribute($value) {
+    //     $this->attributes['name'] = strtolower($value);
+    // }
+    // public function getNameAttribute($value) {
+    //     return ucwords($value);
+    // }
 }
