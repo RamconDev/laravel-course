@@ -58,7 +58,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Old versions commuters and accessors
+     * Old versions commuters and mutators
      */
 
     // public function setNameAttribute($value) {
