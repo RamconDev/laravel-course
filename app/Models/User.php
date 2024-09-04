@@ -48,9 +48,7 @@ class User extends Authenticatable
     protected function name(): Attribute {
         return new Attribute(
             // mutator
-            set: function ($value) {
-                return strtolower($value);
-            },
+            set: fn($value) => strtolower($value),     //function arrow
 
             //accessor
             get: function ($value) {
