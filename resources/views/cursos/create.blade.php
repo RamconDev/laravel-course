@@ -16,7 +16,7 @@
         </label>
         @error('name')
         <br>
-            <span>{{ $message }}</span>
+            <span>*{{ $message }}</span>
         <br>
         @enderror
         <br>
@@ -28,7 +28,7 @@
         </label>
         @error('description')
         <br>
-            <span>{{ $message }}</span>
+            <span>*{{ $message }}</span>
         <br>
         @enderror
         <br>
@@ -40,7 +40,7 @@
         </label>
         @error('category')
         <br>
-            <span>{{ $message }}</span>
+            <span>*{{ $message }}</span>
         <br>
         @enderror
         <br>
